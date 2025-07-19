@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groceria</title>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+<!--header-->
+    
+    <header class="header">
+
+         <a href="#" class="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAq5JREFUSEvNll1LFGEUx39ntVrEIIKUIsQ0Iiz7CmVQQeUnCDWCugkkKdYZExp7m1kT0ZsuvKm0L9ALFUVUH6EwidBKiiKlboxYST2546Tu7szuTBtsc7Ps8/zP+c05zzlnHqFEj5SIy/8N1gTriXEZGBSHd35ZUoM6hDPMc156mSmUyVARq0E/0AEoC9RIL59WO9ZOahAm3TWlX5KcLRqsBtuBN0AZMCwObQERDwMtwDywUxzG88ELRqwmj1EOALMsUCe9fPYFJ9hCjAkgjvBEbA7+NVg7aUa46zoQLorNhXzO1OQSSrenbxab+0H6wIj1FGvYyBi4qZ4mTq1Y/MwLtqggxXugChjnOw0yxC8/m2CwSQIl6b39CbG5Uahg3NoyOYky5GkT4nAtNFhNNqF8ACqAMRx2S7peQzxqESPFK2AXMINQLzbT2abLEatBLbi9uhXYDOzwxOm+/RiCuSJRt722eQtvgS/AJGV0y5UlXytgk3aUwUiA6OLT4nA9E2ywH3ga3VckiyZxeJ4JtignxQ9gXSRX4cWzxKkUi7kMsFeRj1AOhfcVSflQHA7/schoJzXcGdsX4K7JWz8OOWPzFnDT23/may90iM2AP7iLPSzw0rfvnKVCVANr8Sd7gvWI466n9/3bLkajXGXUF+wZfvUmTwZfigNPiUP1aoc5k2vxa3QbOJbT8MWBRxa/4635wSZt6PJ5LWuLilhoFZuR/OBzVFFOOt3/LtVzVEsfU3nB3jm/Bhqy2D3e/33A3qy9F7A0GHwKb1QcGnMC8atgNdzR2R7QVtGWlQFJutemzAz6gk2OotyLRghQC0fE5kE4sEUlKb4Ba4uEp8fkBrFIhQK759xJEiFRJNgWhy4/H3kve2rSglIfGa7MIUwQ507QdangLTMyNKRBycC/AZAV1R8J+kWVAAAAAElFTkSuQmCC"/> GROCERIA </a>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#products">Products</a>
+                <a href="#categories">Categories</a>
+  
+                <div class="dropdown-parent">
+                <a href="#resources">Resources</a>
+                <ul class="dropdown">
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                </ul>
+                </div>
+            </nav>
+
+
+        <div class="icons">
+            <i class='bx bx-menu' id="menu-btn"></i>
+            <i class='bx bx-search' id="search-btn"></i>
+            <i class='bx bxs-cart' id="cart-btn"></i>
+            <i class='bx bxs-user' id="login-btn"></i>
+        </div>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box">
+                <i class='bx bx-search'></i> 
+            </label>
+            <span class="close-btn" onclick="clearSearch()">&times;</span>
+        </form>
+        
+
+        <div class="shopping-cart">
+            <div class="boxs">
+                <i class='bx bxs-trash-alt my-icon'></i>
+                 <div class="img-wrapper">
+                <img src="images/watermelon.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3> Watermelon </h3>
+                    <span class="price">$4.99/-</span>
+                    <span class="quantity">qty : 1</span>
+                </div>
+                </div>
+                 <div class="boxs">
+                    <i class='bx bxs-trash-alt my-icon'></i>
+                     <div class="img-wrapper">
+                    <img src="images/potato.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3> Potato </h3>
+                        <span class="price">$4.99/-</span>
+                        <span class="quantity">qty: 1kg</span>
+                    </div>
+                    </div>
+                 <div class="boxs">
+                        <i class='bx bxs-trash-alt my-icon'></i>
+                        <div class="img-wrapper">
+                        <img src="images/bread.jpg"  alt="">
+                        </div>
+                        <div class="content">
+                            <h3> Bread </h3>
+                            <span class="price">$4.69/-</span>
+                            <span class="quantity">qty : 1</span>
+                        </div>
+            </div>
+            <div class="total"> Total : $19.69/-  </div>
+
+            <a href="#" class="btn">checkout</a>
+        </div>
+       <form action="" class="login-form">
+        <h3>login now</h3>
+        <input type="email" placeholder="Your email" class="box">
+        <input type="password" placeholder="Your password" class="box">  
+        <p>forget your password <a href="#">click here</a></p> 
+        <p>don't have an account <a href="#">create now</a></p> 
+        <input type="submit" value="login now" class="btn">
+    </form>    
+</header>
+
+<!--home-->
+<section class="home" id="home">
+    <div class="content">
+        <h1>fresh and <span>organic</span> groceries delivered to your door.</h1>
+        <p>Shop smart. Eat fresh. Live well.</p>
+        <a href="#products" class="btn">shop now</a>
+    </div>
+
+</section>
+
+
+<!--features-->
+<section class="features" id="features">
+    <h2 class="heading"> our <span> features </span></h2>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="images/vegetable.png" height="170" width="170">
+            <h3>fresh and organic</h3>
+            <p>Healthy veggies, healthy you — shop now!</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="images/delivery.png"  width="170">
+            <h3>free delivery</h3>
+            <p>Free delivery. No limits. Just freshness!</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="images/payment.png" height="170" width="170">
+            <h3>easy payment</h3>
+            <p>Tap, pay, and enjoy — it's that easy!</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+    </div>
+</section>
+
+<!--products-->
+<section class="products" id="products">
+    <h2 class="heading"> our <span> products </span></h2>
+    <div class="swiper product-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                     <img src="images/cucumber.png">
+                    <h3>fresh cucumber</h3>
+                    <div class="price"> $4.99/- - $10.99/-</div>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i> 
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                    <a href="#" class="btn"> add to cart </a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/spinach.jpg">
+                   <h3>fresh spinach</h3>
+                    <div class="price"> $4.99/- - $10.99/-</div>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i> 
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                    <a href="#" class="btn"> add to cart </a>
+                </div>
+
+                    <div class="swiper-slide box">
+                        <img src="images/cabbage.jpg">
+                    <h3>fresh cabbage</h3>
+                    <div class="price"> $4.99/- - $10.99/-</div>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i> 
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                    <a href="#" class="btn"> add to cart </a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/eggplant.jpg">
+                    <h3>fresh eggplant</h3>
+                    <div class="price"> $4.99/- - $10.99/-</div>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i> 
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                    <a href="#" class="btn"> add to cart </a>
+                </div>
+            </div>
+        </div>  
+                   
+    <div class=" swiper product-slider">
+     <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                 <img src="images/lemon.jpg">
+                <h3>fresh lemon</h3>
+                <div class="price"> $4.99/- - $10.99/-</div>
+                <div class="star">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i> 
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <a href="#" class="btn"> add to cart </a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/avocado.jpg">
+               <h3>fresh avacado</h3>
+                <div class="price"> $4.99/- - $10.99/-</div>
+                <div class="star">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i> 
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <a href="#" class="btn"> add to cart </a>
+            </div>
+
+
+            <div class="swiper-slide box">
+                  <img src="images/mango.jpg">
+                <h3>fresh mango</h3>
+                <div class="price"> $4.99/- - $10.99/-</div>
+                <div class="star">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i> 
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <a href="#" class="btn"> add to cart </a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/kiwi.jpg">
+               <h3>fresh kiwi</h3>
+                <div class="price"> $4.99/- - $10.99/-</div>
+                <div class="star">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i> 
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <a href="#" class="btn"> add to cart </a>
+            </div>
+        </div>
+    </div>
+</section>        
+
+<!--categories-->
+
+<section class="categories" id="categories">
+
+    <h2 class="heading">product <span>categories</span></h2>
+    <div class="box-container">
+
+        <div class="box">
+          <img src="images/vege.png">
+          <h3>vegetables</h3>
+          <p>upto 45% off</p>
+          <a href="#products" class="btn"> shop now</a>
+        </div>
+
+        <div class="box">
+            <img src="images/fruit.png">
+            <h3>fruits</h3>
+            <p>upto 45% off</p>
+            <a href="#products" class="btn"> shop now</a>
+          </div>
+
+          <div class="box">
+            <img src="images/dairy.png">
+            <h3>dairy products</h3>
+            <p>upto 45% off</p>
+            <a href="#products" class="btn"> shop now</a>
+          </div>
+         
+          <div class="box">
+            <img src="images/bakery.png">
+            <h3>bakery products</h3>
+            <p>upto 45% off</p>
+            <a href="#products" class="btn"> shop now</a>
+          </div>
+
+    </div>
+</section>
+
+<!--reviews-->
+
+<section class="reviews" id="reviews">
+
+    <h2 class="heading">customer's <span>review</span></h2>
+
+    <div class="swiper review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="images/person1.jpg">
+                <p>Absolutely loved it—great quality and totally worth the price!.</p>
+                <h3> aria </h3>
+                <div class="star">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i> 
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half' ></i>  
+                </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/person2.jpg">
+                    <p>Exceeded my expectations! Highly recommend to anyone considering it.</p>
+                    <h3> zoey </h3>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i> 
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half' ></i>  
+                    </div>
+                </div>
+
+                    <div class="swiper-slide box">
+                        <img src="images/person3.jpg">
+                        <p>Reliable, efficient, and exactly what I needed. Great buy!</p>
+                        <h3> amelia </h3>
+                        <div class="star">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i> 
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>  
+                        </div>
+                    </div>
+
+                        <div class="swiper-slide box">
+                            <img src="images/person4.jpg">
+                            <p>Impressive quality and fast delivery. Totally satisfied!</p>
+                            <h3> lily </h3>
+                            <div class="star">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i> 
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half' ></i>  
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div> 
+        </section>      
+        
+        
+  <!--blogs-->      
+    
+    <section class="blogs" id="blogs">
+        <h2 class="heading"> our <span> blogs </span></h2>
+            <div class="box-container">
+
+                 <div class="boxs">
+                      <img src="images/blog1.jpg">        
+                      <div class="content">
+                           <div class="icon">
+                             <a href="#"><i class='bx bxs-user'></i>by user</a>
+                             <a href="#"><i class='bx bxs-calendar-alt' ></i> 1st may 2025</a>
+                           </div>
+                        <h3>fresh and organic vegetables and fruits</h3>
+                        <p>Promises made, promises kept, without cutting corners.</p>
+                        <a href="#" class="btn">read more</a>
+
+                       </div>
+                 </div>
+
+            <div class="boxs">
+                <img src="images/blog2.jpg">        
+                <div class="content">
+                  <div class="icon">
+                    <a href="#"><i class='bx bxs-user'></i>shraddha</a>
+                    <a href="#"><i class='bx bxs-calendar-alt' ></i> 2nd august 2024 </a>
+                  </div>
+                 <h3>fresh and organic vegetables and fruits</h3>
+                 <p>Exactly what you’re looking for, with nothing held back.</p>
+                 <a href="#" class="btn">read more</a>
+                
+                </div>
+          </div>
+
+        <div class="boxs">
+            <img src="images/blog3.jpg">        
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class='bx bxs-user'></i>by user</a>
+                    <a href="#"> <i class='bx bxs-calendar-alt' ></i> 22 april 2025 </a>
+                </div>
+               <h3>fresh and organic vegetables and fruits</h3>
+               <p>Delivers exactly what it promises, with no compromises.</p>
+               <a href="#" class="btn">read more</a>
+            </div>
+            </div>
+           </div>
+    </section>  
+
+
+  <!--footer-->    
+  
+  <section class="footer">
+    <div class="box-container">
+        <div class="boxs">
+            <h3> GROCERIA <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAq5JREFUSEvNll1LFGEUx39ntVrEIIKUIsQ0Iiz7CmVQQeUnCDWCugkkKdYZExp7m1kT0ZsuvKm0L9ALFUVUH6EwidBKiiKlboxYST2546Tu7szuTBtsc7Ps8/zP+c05zzlnHqFEj5SIy/8N1gTriXEZGBSHd35ZUoM6hDPMc156mSmUyVARq0E/0AEoC9RIL59WO9ZOahAm3TWlX5KcLRqsBtuBN0AZMCwObQERDwMtwDywUxzG88ELRqwmj1EOALMsUCe9fPYFJ9hCjAkgjvBEbA7+NVg7aUa46zoQLorNhXzO1OQSSrenbxab+0H6wIj1FGvYyBi4qZ4mTq1Y/MwLtqggxXugChjnOw0yxC8/m2CwSQIl6b39CbG5Uahg3NoyOYky5GkT4nAtNFhNNqF8ACqAMRx2S7peQzxqESPFK2AXMINQLzbT2abLEatBLbi9uhXYDOzwxOm+/RiCuSJRt722eQtvgS/AJGV0y5UlXytgk3aUwUiA6OLT4nA9E2ywH3ga3VckiyZxeJ4JtignxQ9gXSRX4cWzxKkUi7kMsFeRj1AOhfcVSflQHA7/schoJzXcGdsX4K7JWz8OOWPzFnDT23/may90iM2AP7iLPSzw0rfvnKVCVANr8Sd7gvWI466n9/3bLkajXGXUF+wZfvUmTwZfigNPiUP1aoc5k2vxa3QbOJbT8MWBRxa/4635wSZt6PJ5LWuLilhoFZuR/OBzVFFOOt3/LtVzVEsfU3nB3jm/Bhqy2D3e/33A3qy9F7A0GHwKb1QcGnMC8atgNdzR2R7QVtGWlQFJutemzAz6gk2OotyLRghQC0fE5kE4sEUlKb4Ba4uEp8fkBrFIhQK759xJEiFRJNgWhy4/H3kve2rSglIfGa7MIUwQ507QdangLTMyNKRBycC/AZAV1R8J+kWVAAAAAElFTkSuQmCC"/> </h3>
+            <p>Grocery shopping made simple, smart, and stress-free.</p>
+            <div class="share">
+                <a href="#" class="bx bxl-facebook"></a>
+                <a href="#" class="bx bxl-instagram"></a>
+                <a href="#" class="bx bxl-twitter"></a>
+                <a href="#" class="bx bxl-linkedin-square"></a>
+            </div>   
+        </div> 
+
+        <div class="boxs">
+            <h3>contact info</h3>
+            <a href="#" class="links"> <i class='bx bxs-phone'></i> +123-456-7890 </a> 
+            <a href="#" class="links"> <i class='bx bxs-phone'></i> +122-455-7110 </a> 
+            <a href="#" class="links"> <i class='bx bxs-envelope'></i> abc123@gmail.com </a> 
+            <a href="#" class="links"> <i class='bx bxs-map'></i> mumbai, india 400101 </a> 
+        </div> 
+
+        <div class="boxs">
+            <h3>quick links</h3>
+            <a href="#" class="links"> <i class='bx bx-right-arrow-alt'></i> home </a> 
+            <a href="#" class="links"> <i class='bx bx-right-arrow-alt'></i> features</a> 
+            <a href="#" class="links"> <i class='bx bx-right-arrow-alt'></i> products </a> 
+            <a href="#" class="links"> <i class='bx bx-right-arrow-alt'></i> categories </a>
+            <a href="#" class="links"> <i class='bx bx-right-arrow-alt'></i> reviews </a>
+            <a href="#" class="links"> <i class='bx bx-right-arrow-alt'></i> blogs </a> 
+        </div> 
+
+        <div class="boxs">
+            <h3>newsletter</h3>
+            <p> subscribe for latest updates </p>
+            <input type="email" placeholder=" Your Email" class="email">
+            <input type="submit" value="subscribe" class="btn">
+            <img src="images/pay.png" class="payment-img">
+        </div> 
+    </div>  
+
+   <div class="credit"> created by <span> shraddha bhatt </span> | all rights reserved </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+    
+ 
+   
+
+
+        
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
