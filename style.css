@@ -588,20 +588,25 @@ section{
 
 .footer {
     background: #fff;
-   box-sizing: border-box;
+    padding: 3rem 5rem;
 }
 
 .footer .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
+    gap: 5rem;
     align-items: flex-start; 
 }
 
 .footer .box-container .boxs h3{
     font-size: 2.5rem;
     color: var(--black);
-    padding: 1rem 1rem;
+    padding: 1rem 2rem;
+}
+.footer .box-container .boxs h4{
+    font-size: 2rem;
+    
+
 }
 
 .footer .box-container .boxs h3 i{
@@ -619,18 +624,18 @@ section{
 
 .footer .box-container .boxs .links i{
    color: var(--orange);
-   padding-right: .5rem;
+   padding-right: .1rem;
 }
 
 .footer .box-container .boxs .links:hover i{
-     padding-right: 1rem;
+     padding-right: .3rem;
  }
 
 .footer .box-container .boxs p{
     line-height: 1.8;
     font-size: 1.5rem;
     color: var(--light-color);
-    padding: .5rem 0;
+    padding: 2rem 5;
 }
 
 .footer .box-container .boxs .share a{
@@ -652,7 +657,7 @@ section{
 
 .footer .box-container .boxs .email{
     width: 100%;
-    margin: .7rem 0;
+    margin: .5rem 0;
     padding: 1rem;
     border-radius: .5rem;
     background: #eee;
