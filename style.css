@@ -47,6 +47,14 @@ section{
 }
 
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+
 .heading{
     text-align: center;
     padding: 10rem;
@@ -94,12 +102,18 @@ section{
     box-shadow: var(--box-shadow);
 }
 
-.header .logo{
-    height: 2rem;
-    font-size: 3rem;
-    font-weight: bolder;
-    color: var(--black);
+.header .logo-img img{
+     width: 3.5rem;
+     height: 3.5rem;
+     object-fit: contain;
 }
+
+.header .logo-text{
+    color: var(--black);
+    font-weight: bolder;
+    font-size: 3rem;
+}
+     
 
 .header .navbar a{
     font-size: 1.9rem;
@@ -348,8 +362,8 @@ section{
     background: url('images/banner.png') no-repeat;
     background-position: center;
     background-size: cover;
-    padding-top: 25rem;
-    padding-bottom: 25rem;
+    padding-top: 24.5rem;
+    padding-bottom: 24.5rem;
 }
 
 .home .content{
@@ -377,6 +391,13 @@ section{
    padding: 3rem 2rem;
 }
 
+.feature-img {
+    width: 170px;
+    height: 170px;
+    margin: 2rem  auto; 
+
+}
+
 .features .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -390,13 +411,12 @@ section{
     outline-offset: -1rem;
     text-align: center;
     box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
-
-.features .box-container .box img{
-    margin: 2rem 0;
-    height: 15rem;
-}
-
+ 
 .features .box-container .box h3{
     font-size: 2rem;
     line-height: 1.8;
@@ -430,9 +450,10 @@ section{
    
 }
 
-.products .product-slider img {
-   height: 20rem; 
-   
+.products .product-slider .product-img{
+    width: 170px;
+    height: 170px;
+    margin: 2rem  auto; 
 }
 
 .products .product-slider .box h3{
@@ -467,9 +488,10 @@ section{
     text-align: center;
 }
 
-.categories .box-container .box img{
-  margin: 1rem 0;
-  height: 15rem;
+.categories .box-container .box .categories-img{
+   width: 170px;
+    height: 170px;
+    margin: 2rem  auto; 
 }
 
 .categories .box-container .box h3{
@@ -487,23 +509,36 @@ section{
 
 .reviews .review-slider{
     padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 
 .reviews .review-slider .box{
     background: #fff;
     border-radius: .5rem;
     text-align: center;
-   outline-offset: -1rem;
+    outline-offset: -1rem;
     outline: var(--outline);
     box-shadow: var(--box-shadow);
     transition: .2s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 2rem;
+    
 }
 
 
-.reviews .review-slider .box img{
-    height: 10rem;
-    width: 10rem;
+.reviews .review-slider .box .review-img{
+    width: 170px;
+    height: 170px;
+    margin: 2rem  auto;
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .reviews .review-slider .box p{
@@ -511,6 +546,8 @@ section{
     line-height: 1.8;
     color: var(--light-color);
     font-size: 1.5rem;
+     flex-grow: 1;
+     
 }
 
 .reviews .review-slider .box h3{
@@ -538,7 +575,7 @@ section{
     background: #fff;
 }
 
-.blogs .box-container .boxs img{
+.blogs .box-container .boxs .blog-img{
     height: 20rem;
     width: 100%;
     object-fit: cover; 
@@ -600,7 +637,7 @@ section{
 .footer .box-container .boxs h3{
     font-size: 2.5rem;
     color: var(--black);
-    padding: 1rem 2rem;
+    padding: .5 .5rem;
 }
 .footer .box-container .boxs h4{
     font-size: 2rem;
@@ -725,57 +762,140 @@ section{
 
 
 
+@media (max-width: 1200px) {
+  html {
+    font-size: 58%;
+  }
 
+  section {
+    padding: 2.5rem 4rem;
+  }
 
-/*@media(max-width:991px)
-{
-    html{
-        font-size: 55%;
-        
-    }
-
-    .header{
-        padding: 2rem;
-    }
-    
+  .header {
+    padding: 2rem 4rem;
+  }
 }
 
-@media(max-width:768px)
-{
 
-    #menu-btn{
-        display: inline-block;
-    }
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
 
-   .header .navbar{
+  section {
+    padding: 2rem 3rem;
+  }
+
+  .home {
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    background-position: center center;
+  }
+
+  .heading {
+    padding: 6rem 2rem 2rem;
+    font-size: 2.5rem;
+  }
+
+  .header {
+    padding: 2rem 3rem;
+  }
+
+  .header .shopping-cart,
+  .header .search-form,
+  .header .login-form {
+    width: 90%;
+    right: -120%;
+  }
+
+  .header .shopping-cart.active,
+  .header .search-form.active,
+  .header .login-form.active {
+    right: 2rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+    font-size: 3.2rem;
+    color: var(--black);
+    cursor: pointer;
+  }
+
+  .header .navbar {
     position: absolute;
-    top:110%;
+    top: 110%;
     right: -110%;
-    width: 30rem;
+    width: 25rem;
+    background: #fff;
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
-    background: #fff;
-   }
+    flex-direction: column;
+  }
 
-   .header .navbar.active{
+  .header .navbar.active {
     right: 2rem;
-    transition: .4s linear;
-   }
+    transition: .4s ease-in-out;
+  }
 
-
-   .header .navbar a{
-    font-size: 2rem;
-    margin: 2rem 2.5rem;
+  .header .navbar a {
     display: block;
-   }
+    font-size: 2rem;
+    margin: 2rem;
+  }
 
+  .heading {
+    font-size: 2.4rem;
+  }
+
+  .home {
+    padding-top: 18rem;
+    padding-bottom: 18rem;
+  }
+
+  .home .content h1 {
+    font-size: 2.8rem;
+  }
+
+  .home .content p {
+    font-size: 1.7rem;
+  }
+
+  .features .box-container,
+  .categories .box-container,
+  .blogs .box-container {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media(max-width:450px)
-{
-    html{
-        font-size: 50%;
-        
-    }
-    
-}*/
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    padding: 4rem 1rem 2rem;
+    font-size: 2.2rem;
+  }
+
+  .home .content {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .footer {
+    padding: 2rem;
+  }
+
+  .footer .box-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
+
+
